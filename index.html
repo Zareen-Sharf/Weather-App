@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weatherly</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Weatherly</h1>
+      <p>Enter your location and API key to get the latest weather information</p>
+    </header>
+
+    <main class="main-content">
+      <section class="input-section">
+        <div class="form-group">
+          <label for="api-key">OpenWeatherMap API Key</label>
+          <input
+            type="password"
+            id="api-key"
+            placeholder="Enter your API key"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="city">City</label>
+            <input
+              type="text"
+              id="city"
+              placeholder="e.g. London"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="country">Country</label>
+            <input
+              type="text"
+              id="country"
+              placeholder="e.g. GB"
+              maxlength="2"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <button id="get-weather-btn" type="button">Get Weather</button>
+      </section>
+
+      <section id="weather-result" class="result-section hidden">
+        <div class="weather-card">
+          <div class="weather-header">
+            <h2 id="location-name">Location</h2>
+            <span id="country-code"></span>
+          </div>
+
+          <div class="weather-main">
+            <img id="weather-icon" alt="Weather Icon" />
+            <div class="weather-temp">
+              <span id="temperature">--</span>
+              <span class="unit">°C</span>
+            </div>
+          </div>
+
+          <div class="weather-description">
+            <p id="weather-condition">Loading...</p>
+          </div>
+
+          <div class="weather-details">
+            <div class="detail-item">
+              <span class="detail-label">Feels Like</span>
+              <span id="feels-like" class="detail-value">-- °C</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Humidity</span>
+              <span id="humidity" class="detail-value">-- %</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Wind</span>
+              <span id="wind-speed" class="detail-value">-- m/s</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Pressure</span>
+              <span id="pressure" class="detail-value">-- hPa</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="error-message" class="error-section hidden">
+        <p id="error-text"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Powered by <a href="https://openweathermap.org/api" target="_blank" rel="noopener">OpenWeatherMap</a></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
