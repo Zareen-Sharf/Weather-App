@@ -1,6 +1,6 @@
 # Weatherly
 
-We are updating this readme file.A clean, modern, and responsive weather web application that retrieves live weather information from the OpenWeatherMap API.
+A clean, modern, and responsive weather web application that retrieves live weather information from the OpenWeatherMap API.
 
 ## Features
 
